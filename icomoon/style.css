@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ehjytq');
-  src:  url('fonts/icomoon.eot?ehjytq#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ehjytq') format('truetype'),
-    url('fonts/icomoon.woff?ehjytq') format('woff'),
-    url('fonts/icomoon.svg?ehjytq#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?brst5z');
+  src:  url('fonts/icomoon.eot?brst5z#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?brst5z') format('truetype'),
+    url('fonts/icomoon.woff?brst5z') format('woff'),
+    url('fonts/icomoon.svg?brst5z#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pushpin:before {
+  content: "\e946";
+}
+.icon-compass:before {
+  content: "\e949";
+}
+.icon-display:before {
+  content: "\e956";
+}
 .icon-search:before {
   content: "\e986";
+}
+.icon-fire:before {
+  content: "\e9a9";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-left:before {
+  content: "\ea44";
 }

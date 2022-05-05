@@ -1,3 +1,10 @@
+/* Start Varabile */
+:root{
+    --main-color:#19c8fa;
+    --second-color:rgb(15 116 143 /70%)
+}
+/* End Varabile */
+
 /* Start Global Rules */
 *{
     -webkit-box-sizing: border-box;
@@ -8,7 +15,6 @@
 }
 body{
     font-family: 'Open Sans', sans-serif;
-    background-color: black;
 }
 
 @media (min-width:786px) {
@@ -38,21 +44,61 @@ ul{
 }
 /* End Global Rules */
 
-/* Start Varabile */
-:root{
-    --main-color:#19c8fa;
+/* Start Components */
+.main-heading{
+    text-align: center;
 }
-/* End Varabile */
+.main-heading h2{
+    font-size: 40px;
+    font-weight: normal;
+    margin: 80px 0 80px;
+    position: relative;
+}
+.main-heading h2::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 120px;
+    background-color: #333;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main-heading h2::after{
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    left: 50%;
+    bottom: -37px;
+    transform: translateX(-50%);
+    background-color: white;
+}
+.main-heading p{
+    width: 60%;
+    margin: 0 auto 100px;
+    line-height: 2;
+    color: #777;
+    max-width: 100%;
+}
+/* End Components */
+
 
 /* Start Header */
 header{
-
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 2;
 }
 header .container{
     display: flex;
     justify-content: space-between;
     position: relative;
     align-items: center;
+    min-height: 97px;
 }
 header .container::after{
     content: '';
@@ -109,5 +155,146 @@ header .form i{
 header .form i:hover{
     color: var(--main-color);
 }
-/* End Header */
+header .menu{
+    color: white;
+    font-size: 22px;
+}
+@media(min-width:768px){
+    header .menu{
+        display: none;
+    }
+}
+@media(max-width:768px){
+    header nav ul{
+        display: none;
+    }
 
+header .menu:hover + ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0 0 0 /50%);
+}
+header nav ul li a{
+    padding: 15px;
+}
+}
+/* End Header */
+/* Start Landing */
+.landing{
+    background-image: url(/img/landing.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+.landing .layout{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/60%);
+}
+.landing .text{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 50px;
+    background-color: var(--second-color);
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.landing .text .content{
+    max-width: 500px;
+}
+.landing .text .content h2{
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+.landing .text .content p{
+    font-size: 16px;
+    line-height: 2;
+}
+.landing .left-right{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ddd;
+    font-size: 23px;
+}
+.landing .left{
+    left: 30px;
+}
+.landing .right{
+    right: 30px;
+}
+.landing .bullets{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.landing .bullets li{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 10px;
+
+}
+.landing .bullets li.active{
+    background-color: var(--main-color);
+}
+@media(max-width:768px){
+    .landing .text{
+        width: 100%;
+    }
+}
+/* End Landing */
+
+/* Start Services */
+@media(min-width:768px){
+.serv-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(450px,1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+}
+}
+.services .box{
+    display: flex;
+}
+.services .box h3{
+    margin-bottom: 30px;
+    color: var(--main-color);
+}
+.services .box p{
+    line-height: 2;
+    color: #777;
+}
+.services .box i{
+    font-size: 3em;
+    margin-right: 50px;
+
+}
+@media(max-width:767px){
+    .services .box i{
+        margin: 0 0 30px;
+    }
+    .serv-container .box{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+/* End Services */
