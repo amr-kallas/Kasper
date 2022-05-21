@@ -16,7 +16,9 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 @media (min-width:786px) {
     .container{
         width: 750px;
@@ -749,16 +751,16 @@ header nav ul li a{
     left: 50%;
     transform: translateX(-50%);
 }
-.pricing .plan .footer{
+.pricing .plan .foot{
     margin: 20px;
     padding: 20px;
     font-size: 20px;
 }
-.pricing .plan .footer a{
+.pricing .plan .foot a{
     list-style: none;
     text-decoration: none;
     border: 1px solid var(--main-color);
-    padding: 10px 15px;
+    padding: 15px;
 }
 .pricing .contact{
     text-align: center;
@@ -844,6 +846,7 @@ header nav ul li a{
     border: 1px solid white;
     border-left: none;
     width: 130px;
+    cursor: pointer;
 }
 .subscribe form input[type="submit"]:focus,
 .subscribe form input[type="email"]:focus{
@@ -866,6 +869,9 @@ header nav ul li a{
 }
 /* End Subscribe */
 /* Start Contact */
+.contact{
+    padding: 100px 0;
+}
 .contact .content{
     display: flex;
     justify-content: space-between;
@@ -893,6 +899,7 @@ header nav ul li a{
     border: none;
     margin-left: auto;
     display: flex;
+    cursor: pointer;
 }
 .contact .content .info{
     flex-basis: 25%;
@@ -906,7 +913,7 @@ header nav ul li a{
     margin-bottom: 20px;
     color: #777;
 }
-.contact .content .info h4:nth-of-type(2){
+.contact .content .info2 h4{
     margin-top: 90px;
 }
 .contact .content .info address{
@@ -924,6 +931,53 @@ header nav ul li a{
     }
 }
 /* End Contact */
-
+/* Start Footer */
+.footer{
+    padding: 100px 0;
+    background-image: url(/img/subscribe.jpg);
+    background-size: cover;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.footer::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 /70%);
+}
+.footer .container{
+    position: relative;
+}
+.footer img{
+    margin-top: -50px;
+    margin-bottom: 50px;
+    width: 120px;
+}
+.footer h4{
+    margin: 0 auto 40px;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: normal;
+    width: fit-content;
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+.footer .icon i{
+    padding: 10px 15px;
+    display: inline-block;
+}
+.footer p{
+    margin-top: 60px;
+    font-size: 18px;
+}
+.footer p span{
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* End Footer */
 
 
